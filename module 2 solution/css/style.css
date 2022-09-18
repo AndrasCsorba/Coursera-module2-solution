@@ -1,0 +1,92 @@
+/** Base styles **/
+/** Box model, font family  **/
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
+
+
+body {
+	margin: auto 5px;
+}
+
+/** Top and bottom margins definition  Font size 75% bigger than default font.**/
+h1 {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+	font-size: 1.75em;
+}
+
+/** This is inside the responsive column. Made relative to accomodate the section title  and section content inside . **/
+
+section {
+	box-sizing: auto;
+	position: relative;
+	margin: 10px;
+	border: 1px solid rgb(5, 0, 0);
+	background-color: rgb(192, 181, 181);
+}
+
+/** Positioning of section title box with width and border definition. Text font and size (25% bigger than default) defined **/
+
+p.title {
+	position : absolute;
+	top: 0%;
+	right: 0%;
+	width: 25%;
+	border: 1px solid rgb(14, 13, 13);
+	text-align: center;
+	font-size: 1.25em;
+}
+
+/** Color to section titles **/
+#box1 {background-color: #60dd67;}
+#box2 {background-color: #c29392;}
+#box3 {background-color: #f7c94c;}
+
+/** Margin top defined to avoid "coallition" with section title. Padding defined **/
+p.content {
+	margin-top: 1.25em;
+	padding : 1em;
+}
+
+
+
+/** Simple Responsive "Framework" **/
+.row {
+	width: 100%;
+}
+
+/** Desktop view **/
+@media (min-width: 992px) {
+	.col-desktop-4 {
+		float: left;
+		width: 33.33%;
+	}
+}
+
+/** Tablet view **/
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-tablet-6, .col-tablet-12 {
+		float: left;
+	}
+
+	.col-tablet-6 {
+		width: 50%;
+	}
+
+	.col-tablet-12 {
+		width: 100%;
+	}
+}
+
+/** Mobile view **/
+@media (max-width: 767px) {
+	.col-mobile-12 {
+		width: 100%;
+		float: left;
+	}
+}
